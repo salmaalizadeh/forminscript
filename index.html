@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>
+          <form
+            onsubmit="
+              event.preventDefault();
+              onFormSubmit();
+            "
+            autocomplete="off"
+          >
+            <div>
+              <label for="fullname">Full name</label>
+              <input type="text" name="fullname" id="fullname" />
+            </div>
+            <div>
+              <label for="empcode">Emp code</label>
+              <input type="text" name="empcode" id="empcode" />
+            </div>
+            <div>
+              <label for="salary">Salary</label>
+              <input type="number" name="salary" id="salary" />
+            </div>
+            <div>
+              <label for="city">City</label>
+              <input type="text" name="city" id="city" />
+            </div>
+            <div class="form-ac">
+              <input type="submit" value="Submit" />
+            </div>
+          </form>
+        </td>
+        <td>
+          <table class="list" id="emplist">
+            <thead>
+              <tr class="tr">
+                <th>Full name</th>
+                <th>Emp code</th>
+                <th>Salary</th>
+                <th>City</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <script src="./script.js"></script>
+  </body>
+</html>
